@@ -1,6 +1,6 @@
 // Imports básicos
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 export default function DetailPage() {
   const { search } = useLocation();
@@ -17,6 +17,7 @@ export default function DetailPage() {
     <>
       <h2>Detail Page</h2>
       <h3>{query}</h3>
+      <Link to="/">Home Screen</Link>
     </>
   )
 
