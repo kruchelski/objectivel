@@ -1,4 +1,4 @@
-@import './colorPalette.css';
+@import "./colorPalette.css";
 
 .header-container {
   width: 100%;
@@ -6,20 +6,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 24px;
-  padding-right: 17px;
-  background-color: red;
+  background-color: var(--color-bg-0);
+}
+
+.logo-img {
+  width: 96px;
+  height: 24px;
+  margin-left: 24px;
 }
 
 .username-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   background-color: transparent;
   color: var(--color-fg-0);
+  width: 50%;
+}
+
+.username-text-container {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .username {
   color: inherit;
   font-weight: bold;
+  margin-right: 10px;
+}
+
+.sigla-container {
+  background-color: var(--color-bg-1);
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 17px;
+}
+
+.sigla {
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
 }

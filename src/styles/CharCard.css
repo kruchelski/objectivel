@@ -1,0 +1,71 @@
+@import "./colorPalette.css";
+
+.char-card-container {
+  width: calc(100% - 24px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 24px;
+  background-color: var(--color-bg-0);
+  height: 88px;
+  min-height: 88px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  box-shadow: 0px 0px 5px var(--color-shadow);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.personagem-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+.avatar-img {
+  width: 48px;
+  height: 48px;
+  margin-right: 24px;
+  border-radius: 4px;
+}
+
+.personagem-nome {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-fg-0);
+}
+
+.series-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  font-size: 14px;
+  color: var(--color-fg-0);
+}
+
+.eventos-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  font-size: 14px;
+  color: var(--color-fg-0);
+}
+
+@media only screen and (max-width: 375px) {
+  .personagem-nome {
+    font-size: 14px;
+  }
+
+  .char-card-container {
+    height: 72px;
+    min-height: 72px;
+  }
+
+}

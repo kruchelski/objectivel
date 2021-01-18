@@ -12,7 +12,7 @@ import MainRouter from './routes/MainRouter';
 
 function App() {
   return (
-    <div>
+    <div className='main-app-container'>
       <Header nomeCandidato={'Cassiano Kruchelski'} />
       <MainRouter />
     </div>

@@ -1,0 +1,49 @@
+@import './colorPalette.css';
+
+.charlist-main-wrapper {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow-y: hidden;
+  margin-top: 40px;
+  overflow-x: hidden;
+}
+
+.charlist-head {
+  width: calc(100% - 24px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.charlist-head-item {
+  font-size: 12px;
+  color: var(--color-fg-1);
+  flex: 1;
+}
+
+.charlist-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  margin-top: 9px;
+}
+
+p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 375px) {
+  .charlist-head {
+    width: calc(100% - 96px);
+    padding-left: 96px;
+  }
+}

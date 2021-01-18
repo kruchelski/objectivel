@@ -2,46 +2,66 @@
 import React, { useState, useEffect } from 'react';
 
 // Imports de estilo
-import '../styles/Header';
+import '../styles/Header.css';
 
 // Imports de assets
 import logo from '../assets/img/logo.png';
 
 export default function Header({ nomeCandidato }) {
-  const [nome, setNome] = useState(nomeCandidato);
+  // const [nome, setNome] = useState(nomeCandidato);
   const [sigla, setSigla] = useState('CB');
 
-  const setSigla = () => {
-    let siglaTemp;
+  const getSigla = () => {
+    let siglaTemp = ''
     if (!nomeCandidato) {
       setSigla('CB');
       return;
     }
-    
+    const nomeSplited = nomeCandidato.split(' ');
+    for (let i = 0; i < nomeSplited.length; i++) {
+      if (i > 1) {
+        break;
+      }
+      siglaTemp += nomeSplited?.[i]?.[0];
+    }
+
+    setSigla(siglaTemp);
+
   }
 
   useEffect(() => {
-    let siglaTemp;
-    if (nome) {
-
-    }
-  }, [])
+    getSigla();
+  })
 
 
   return (
     <div className='header-container'>
-      <div>
-        <img src={logo} alt="Logo" />
-      </div>
+
+      {/* Logo */}
+      <img src={logo} alt="Logo" className='logo-img' />
+      
+      {/* Textos e avatar */}
       <div className='username-container'>
-        <div className='username'>
-          {nomeCandidato || 'Nome do Candidato'}
+        
+        {/* Textos */}
+        <div className='username-text-container'>
+          <div>
+            <span className='username'>
+              {nomeCandidato || 'Nome do Candidato'}
+            </span>
+          </div>
+          <div>
+            <span>
+              Teste de Front-end
+            </span>
+          </div>
         </div>
-        <div>
 
+        {/* Avatar */}
+        <div className='sigla-container'>
+          <span className='sigla'>{sigla}</span>
         </div>
       </div>
-
     </div>
   )
 }
