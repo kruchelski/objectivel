@@ -14,9 +14,7 @@ export default function LoadingIndicator() {
          color="#555555"
          height={200}
          width={200}
- 
       />
     </div>
-
   )
 }

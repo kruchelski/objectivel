@@ -4,14 +4,22 @@ import React, { useState } from 'react';
 // Imports de estilo
 import '../styles/Input.css';
 
-export default function Input({ onSubmitInput, inputLabel, inputPlaceholder }) {
+export default function Input({ onSubmitInput, inputLabel, inputValue, inputPlaceholder }) {
 
-  const [inputText, setInputText] = useState('');
+  const [inputText, setInputText] = useState(inputValue);
 
+  /**
+   * Ouvir mudanças no input
+   * @param {*} event Evento da mudança no input
+   */
   const handleChange = (event) => {
     setInputText(event.target.value);
   }
 
+  /**
+   * Função para ouvir o evento de submit
+   * @param {*} event Evento de submit
+   */
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!inputText || inputText === '') {

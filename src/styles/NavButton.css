@@ -12,6 +12,7 @@
   color: var(--color-fg-0);
   margin-left: 8px;
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .nav-button-selecionado {

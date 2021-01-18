@@ -6,6 +6,9 @@ import '../styles/NavButton.css';
 
 export default function NavButton ({ pagina, selecionado, handleNavButtonClick }) {
 
+  /**
+   * Evento de clicar no botão
+   */
   const onNavButtonClick = () => {
     handleNavButtonClick(pagina);
   }

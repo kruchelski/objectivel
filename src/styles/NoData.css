@@ -1,0 +1,14 @@
+@import './colorPalette.css';
+
+.nodata-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nodata-msg {
+  font-size: 20px;
+  color: var(--color-fg-0);
+  text-align: center;
+}

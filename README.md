@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h1 align="center">
+  ObjectiVel
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple _Single Page Application_ - (SPA) - for React testing consuming data from the [Marvel API](https://developer.marvel.com/).
 
-## Available Scripts
+<!-- Infos -->
+<p align="center">
+  <img src="https://img.shields.io/static/v1?labelColor=167ABC&color=777777&label=created%20at&message=Jan%202021" alt="Creation Date" />
 
-In the project directory, you can run:
+  <img src="https://img.shields.io/github/last-commit/kruchelski/objectivel?label=updated%20at&labelColor=167ABC&color=777777" alt="Update Date" />
 
-### `npm start`
+  <img src="https://img.shields.io/github/v/tag/kruchelski/objectivel?label=latest%20version&labelColor=167ABC&color=777777" alt="Latest Version" />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img src="https://img.shields.io/github/license/kruchelski/objectivel?labelColor=167ABC&color=777777" alt="Project License" />
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<div style="color:#333333">
 
-### `npm test`
+### 😶 What's the goal of this project?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is an application developed for testing skills with React development
 
-### `npm run build`
+The requirements of this project envolves:
+- Transform a prototype made with Adobe XD into a usable web application;
+- Must be responsive;
+- Consume data from the Marvel API;
+- Develop a details page in freestyle
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🖥 How do these stuff work?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application was made using ```create-react-app```. A few more libraries were added. The user access the application and meets the Home Page. In this page a request is made to the API to fetch a list of characters. The characters are listed and the user can click in one of them (or do a search or navigate between the result pages) to access details of this character. In the details screen there are some links to external resources (like wiki of the character) and a brief list of series, events and comics that the choosen character is part of.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🚜 What is under the hood?
 
-### `npm run eject`
+Is just a Reac App with a few more libraries
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Third Party APIs:
+- [Marvel API](https://developer.marvel.com/)
+#### General
+- [NPM](https://www.npmjs.com/)
+#### Some of the main libraries:
+- [Axios](https://www.npmjs.com/package/axios)
+- [React Router Dom](https://www.npmjs.com/package/react-router-dom)
+- [MD5](https://www.npmjs.com/package/md5)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Note: Make sure you have Node v12.* or above and NPM in command line
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 🎛 So... How to set up the environment?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+As mentioned before, it's required to have Node with version 12 or above and NPM in command line. .
 
-## Learn More
+There are three steps to make everything work:
+1.Edit the .env.example according to the instructions inside the file (basically create a copy of the file and put a Marvel API key)
+2.Install the dependencies
+3.Start the App
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The steps 2 and 3 can be done as follows:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# In the root directory of the application:
+$ npm install       # This will download and install all of the dependencies
+$ npm start         # This will start the application 
+```
 
-### Code Splitting
+After that the application will be available in localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</div>

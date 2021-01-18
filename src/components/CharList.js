@@ -1,16 +1,13 @@
 // Imports básicos
 import React, { useState, useEffect } from 'react';
 
-// Imports de estilo
-import '../styles/CharList.css';
-
 // Imports de componente
 import CharCard from './CharCard';
 
-// Imports temp
-import avatar from '../assets/img/avatar.png';
+// Imports de estilo
+import '../styles/CharList.css';
 
-export default function CharList({ onCardClickCallback, personagens }) {
+export default function CharList({ personagens }) {
 
   const [mobileWidth, setMobileWidth] = useState(false);
 
@@ -19,17 +16,18 @@ export default function CharList({ onCardClickCallback, personagens }) {
     window.addEventListener("resize", updateDimensions);
   })
 
+  /**
+   * Verifica o tamanho da janela após a mesma ser redimensionada
+   */
   const updateDimensions = () => {
     let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
     setMobileWidth(windowWidth <= 375);
   }
 
-  const handleOnClick = (char) => {
-    onCardClickCallback(char)
-  }
-
+  // Inicializa a variável para os componentes de CharCard
   const charCards = []
 
+  // Adiciona os componentes à variável de lista de CharCard
   personagens.forEach((dado, index) => {
     charCards.push(
       <CharCard
@@ -39,7 +37,6 @@ export default function CharList({ onCardClickCallback, personagens }) {
         nome={dado.nome}
         series={dado.series}
         eventos={dado.eventos}
-        onClickCallback={handleOnClick}
       />)
 
   })

@@ -1,0 +1,63 @@
+@import './colorPalette.css';
+
+.description-container {
+  width: 50%;
+  min-height: 450px;
+  max-height: 450px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px var(--color-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: stretch;
+  background-color: var(--color-bg-1);
+}
+
+.description-nome-container {
+  width: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'PT Sans Caption', 'PT Sans', sans-serif;
+  font-weight: bold;
+  background-color: var(--color-accent);
+  color: var(--color-bg-0);
+  font-size: 24px;
+}
+
+.description-id-container {
+  width: calc(100% - 40px);
+  padding: 5px 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'PT Sans ', sans-serif;
+  font-size: 12px;
+  color: var(--color-fg-1);
+  background-color: transparent;
+  font-style: italic;
+}
+
+.description-texto {
+  width: calc(100% - 40px);
+  padding: 20px 20px 0;
+  display: flex;
+  text-align: justify;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'PT Sans ', sans-serif;
+  font-size: 14px;
+  color: var(--color-fg-0);
+  background-color: transparent;
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 375px) {
+  .description-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

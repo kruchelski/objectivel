@@ -1,0 +1,45 @@
+@import './colorPalette.css';
+
+.media-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 15px 0;
+  background-color: var(--color-bg-1);
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px var(--color-shadow);
+
+}
+
+.media-container-titulo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  color: var(--color-fg-0);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+
+.media-container-lista {
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 375px) {
+  media-container-titulo {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}

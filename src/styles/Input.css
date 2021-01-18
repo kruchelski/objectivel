@@ -10,8 +10,6 @@ label {
 }
 
 .input-wrapper {
-  /* width: 295px; */
-  /* min-width: 295px; */
   height: 32px;
   display: flex;
   flex-direction: row;

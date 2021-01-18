@@ -8,9 +8,11 @@ import '../styles/Header.css';
 import logo from '../assets/img/logo.png';
 
 export default function Header({ nomeCandidato }) {
-  // const [nome, setNome] = useState(nomeCandidato);
   const [sigla, setSigla] = useState('CB');
 
+  /**
+   * Monta a sigla para ficar no avatar
+   */
   const getSigla = () => {
     let siglaTemp = ''
     if (!nomeCandidato) {
@@ -26,13 +28,11 @@ export default function Header({ nomeCandidato }) {
     }
 
     setSigla(siglaTemp);
-
   }
 
   useEffect(() => {
     getSigla();
   })
-
 
   return (
     <div className='header-container'>
